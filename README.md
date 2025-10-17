@@ -1,4 +1,4 @@
-# relative
+# do-relative
 Open and import relatively. 
 Open files relative to the module you are in, instead of \_\_main__ module. 
 Import modules relatively, directly using ```import module``` syntax, without using the ```from .``` syntax. 
@@ -6,12 +6,12 @@ Or use ```from .``` even if you are not in a package.
 Import relative to given custom paths, including root directory so you can do an absolute import.
 
 # Api Reference
-_class_ relative.**RelativeOpener**()
+_class_ do_relative.**RelativeOpener**()
 
 Constructor of this class returns an ```open``` function, instead of its instance. 
 The paths you give to this function will be treated as relative to the directory calling module resides in. 
 
-relative.**relative_import**(import_statement, folder = None)
+do_relative.**relative_import**(import_statement, folder = None)
 
 Executes the _import_statement_ in caller's scope and relative to the calling module's location. 
 Calling this function from another function is not supported. 
