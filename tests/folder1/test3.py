@@ -1,4 +1,4 @@
-import relative
+import do_relative
 
 print("in test3")
-relative.relative_import("from .. import test4")
+do_relative.relative_import("from .. import test4")
