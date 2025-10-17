@@ -4,16 +4,14 @@ import re
 
 
 class RelativeOpener:
-    def __new__(cls, __file__, function = True):
+    def __new__(cls, function = True):
+        __file__ = sys._getframe(1).f_globals["__file__"]
         opener = object.__new__(cls)
+        opener.__file__ = __file__
         if function:
-            opener.__init__(__file__, function)
             return opener.open
         else:
             return opener
-        
-    def __init__(self, __file__, function = True):
-        self.__file__ = __file__
 
     def get_abspath(self, path):
         base_dir = os.path.dirname(os.path.abspath(self.__file__))
