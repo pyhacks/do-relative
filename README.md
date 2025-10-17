@@ -5,6 +5,9 @@ Import modules relatively, directly using ```import module``` syntax, without us
 Or use ```from .``` even if you are not in a package.
 Import relative to given custom paths, including root directory so you can do an absolute import.
 
+# Installation
+```pip install do-relative```
+
 # Api Reference
 _class_ do_relative.**RelativeOpener**()
 
